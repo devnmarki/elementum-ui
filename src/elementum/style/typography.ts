@@ -1,5 +1,5 @@
 export type Font = {
-  font?: string;
+  font?: string | "sans-serif";
   size?: string;
   weight?: number;
 };

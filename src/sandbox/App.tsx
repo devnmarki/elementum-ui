@@ -1,8 +1,10 @@
 import { Body } from "../elementum/components/body";
 import { FlexContainer } from "../elementum/components/container";
-import { Text } from "../elementum/components/text";
+import { registerFont, Text } from "../elementum/components/text";
 import { Alignment, Direction } from "../elementum/enums/layout";
 import { Colors } from "../elementum/style/colors";
+
+registerFont("Roboto", "100;200;300;400;500;600;700;800;900");
 
 const App = () => {
   return (
@@ -17,7 +19,9 @@ const App = () => {
         gapY="10px"
         direction={Direction.Vertical}
       >
-        <Text>This test text</Text>
+        <Text color={Colors.yellow[200]} font={{ font: "Roboto", weight: 600 }}>
+          This test text with custom font
+        </Text>
       </FlexContainer>
     </Body>
   );
