@@ -1,9 +1,8 @@
-function App() {
-  return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </>
-  );
-}
+import Body from "../elementum/body";
+import { Colors } from "../elementum/utils/colors";
+
+const App = () => {
+  return <Body background={Colors.blue[500]}></Body>;
+};
 
 export default App;

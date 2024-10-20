@@ -1,0 +1,21 @@
+import { FC, ReactNode } from "react";
+import { Color, Colors } from "./utils/colors";
+
+interface BodyProps {
+  background?: Color;
+  children?: ReactNode;
+}
+
+const Body: FC<BodyProps> = ({ background, children }) => {
+  const style = {
+    backgroundColor: background || Colors.gray[300],
+  };
+
+  return (
+    <div className="w-screen h-screen" style={style}>
+      {children}
+    </div>
+  );
+};
+
+export default Body;
