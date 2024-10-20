@@ -1,12 +1,12 @@
 import { FC, ReactNode } from "react";
-import { Color, Colors } from "./utils/colors";
+import { Color, Colors } from "../style/colors.ts";
 
 interface BodyProps {
   background?: Color;
   children?: ReactNode;
 }
 
-const Body: FC<BodyProps> = ({ background, children }) => {
+export const Body: FC<BodyProps> = ({ background, children }) => {
   const style = {
     backgroundColor: background || Colors.gray[300],
   };
@@ -17,5 +17,3 @@ const Body: FC<BodyProps> = ({ background, children }) => {
     </div>
   );
 };
-
-export default Body;
